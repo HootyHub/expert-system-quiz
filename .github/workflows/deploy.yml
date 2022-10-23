@@ -39,7 +39,7 @@ jobs:
 
       - name: Build dependencies
         run: |
-          npm build
+          npm run build
 
       - name: Deploy website
         uses: JamesIves/github-pages-deploy-action@v4
