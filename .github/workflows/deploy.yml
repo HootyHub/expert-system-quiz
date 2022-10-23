@@ -40,3 +40,10 @@ jobs:
       - name: Build dependencies
         run: |
           npm run build -- --base=/msi-project/
+
+      - name: Deploy website
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          BRANCH: public
+          FOLDER: dist
+          CLEAN: true
