@@ -13,6 +13,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Replace build
+        uses: jacobtomlinson/gha-find-replace@v2
+        with:
+          find: "vite build"
+          replace: "vite build --base=/msi-project/"
+          include: "**package.json"
+
       - name: Set up node
         uses: actions/setup-node@v2
         with:
@@ -44,7 +51,6 @@ jobs:
       - name: Deploy website
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: public
-          FOLDER: dist
+          BRANCH: dist
+          FOLDER: .
           CLEAN: true
