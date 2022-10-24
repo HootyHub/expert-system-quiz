@@ -36,7 +36,7 @@ jobs:
           npm install
       - name: Build dependencies
         run: |
-          npm run build -- --base=/msi-test/
+          npm run build -- --base=/msi-project/
       - uses: actions/upload-artifact@master
         with:
           name: page
