@@ -1,6 +1,6 @@
 <template>
   <div class="flex items-center justify-center h-screen">
-    <div class="w-5/6 md:w-2/3">
+    <div class="transition-all duration-300 w-5/6 md:w-2/3">
       <div
         class="border-4 border-gray-400 md:text-2xl p-3 rounded-lg flex items-center justify-center md:p-6 mb-3"
       >
