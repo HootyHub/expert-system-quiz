@@ -12,7 +12,7 @@ const count = ref(0)
   <h1>{{ msg }}</h1>
 
   <div class="card">
-    Hello world
+    Hello world! Again
   </div>
 </template>
 
