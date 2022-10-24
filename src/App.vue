@@ -1,31 +1,31 @@
-<script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from "./components/HelloWorld.vue";
-</script>
-
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div
+    class="flex items-center justify-center h-screen bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100"
+  >
+    <div
+      class="bg-white backdrop-filter backdrop-blur-lg bg-opacity-20 rounded-xl shadow-lg transition-all duration-300 w-5/6 md:w-2/3 p-4 md:p-16"
+    >
+      <div class="">
+        <div
+          class="rounded-2xl font-semibold bg-white shadow-lg backdrop-filter backdrop-blur-lg bg-opacity-50 text-lg md:text-2xl p-5 flex items-center justify-center md:p-6 mb-3"
+        >
+          Czy lubisz koty?
+        </div>
+        <div class="min-h-full flex flex-col justify-center">
+          <div class="grid grid-cols-1 gap-4 md:gap-4 md:grid-cols-2">
+            <button
+              class="w-full rounded-2xl bg-white shadow-lg backdrop-filter backdrop-blur-lg bg-opacity-50 p-4 transition md:text-2xl md:p-6"
+            >
+              Tak
+            </button>
+            <button
+              class="w-full rounded-2xl bg-white shadow-lg backdrop-filter backdrop-blur-lg bg-opacity-50 p-4 transition md:text-2xl md:p-6"
+            >
+              Tak
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
-
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
