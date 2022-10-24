@@ -1,4 +1,4 @@
-name: "Deploying website to GitHub Pages"
+name: "Builds website"
 
 on:
   push:
@@ -41,7 +41,7 @@ jobs:
         run: |
           npm run build -- --base=/msi-project/
 
-      - name: Deploy website
+      - name: Push site to public
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           BRANCH: public
