@@ -1,4 +1,4 @@
-name: "Builds website"
+name: "Building and deploying website"
 
 on:
   push:
