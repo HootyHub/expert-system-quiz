@@ -6,25 +6,24 @@ on:
       - main
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-20.04
-    name: "Deploying website to GitHub Pages"
+    name: "Building website"
 
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Set up node
         uses: actions/setup-node@v2
         with:
-          node-version: '16'
-          cache: 'npm'
+          node-version: "16"
+          cache: "npm"
           cache-dependency-path: "./package-lock.json"
 
       - name: Determine npm cache directory
         id: npm-cache
         run: |
           echo "::set-output name=dir::$(npm config get cache)"
-
       - name: Restore npm cache
         uses: actions/cache@v2
         with:
@@ -32,18 +31,39 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-
       - name: Install dependencies
         run: |
           npm install
-
       - name: Build dependencies
         run: |
-          npm run build -- --base=/msi-project/
-
-      - name: Push site to public
-        uses: JamesIves/github-pages-deploy-action@v4
+          npm run build -- --base=/msi-test/
+      - uses: actions/upload-artifact@master
         with:
-          BRANCH: public
-          FOLDER: dist
-          CLEAN: true
+          name: page
+          path: dist
+          if-no-files-found: error
+
+  deploy:
+    needs: build
+    name: "Deploying website to GitHub Pages"
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@master
+        with:
+          name: page
+          path: .
+      - uses: actions/upload-pages-artifact@v1
+        with:
+          path: .
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
