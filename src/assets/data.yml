@@ -1,0 +1,17 @@
+categories:
+  - name: "machine learning"
+    questions:
+      - query: "What does a fox say?"
+      - answers:
+        - key: "Yes"
+          weight: 1.1
+        - key: "No"
+          weight: 0.9
+languages:
+  - key: "python"
+    categories:
+      - "machine learning"
+  - key: "cpp"
+    categories:
+      - "performance"
+      
