@@ -1,12 +1,18 @@
-categories:
-  - name: "machine learning"
-    questions:
-      - query: "What does a fox say?"
-      - answers:
-        - key: "Yes"
-          weight: 1.1
-        - key: "No"
-          weight: 0.9
+ questions:
+  - query: "Do you like making websites?"
+    answers:
+      - key: "Yes"
+        affects:
+          - category: "web"
+            weight: 1.1
+          - category: "desktop"
+            weight: 0.9
+      - key: "No"
+        affects:
+          - category: "desktop"
+            weight: 1.1
+          - category: "web"
+            weight: 0.5
 languages:
   - key: "python"
     categories:
@@ -14,4 +20,3 @@ languages:
   - key: "cpp"
     categories:
       - "performance"
-      
