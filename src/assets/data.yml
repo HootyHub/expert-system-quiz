@@ -5,18 +5,24 @@
         affects:
           - category: "web"
             weight: 1.1
-          - category: "desktop"
-            weight: 0.9
       - key: "No"
         affects:
-          - category: "desktop"
-            weight: 1.1
           - category: "web"
             weight: 0.5
 languages:
   - key: "python"
     categories:
-      - "machine learning"
+      - name: "machine learning"
+        weight: 10
+      - name: "web design"
+        weight: 2
+      - name: "beginner"
+        weight: 6
   - key: "cpp"
     categories:
-      - "performance"
+      - name: "performance"
+        weight: 9
+      - name: "advanced"
+        weight: 7
+      
+
