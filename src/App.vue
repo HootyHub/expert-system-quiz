@@ -10,7 +10,7 @@
     <div
       class="bg-white backdrop-filter backdrop-blur-lg bg-opacity-20 rounded-xl shadow-lg transition-all duration-300 w-5/6 md:w-2/3 p-4 md:p-16"
     >
-      <section v-if="true">
+      <section v-if="false">
         <Heading displayText="Czy lubisz koty?"/>
         <div class="min-h-full flex flex-col justify-center">
           <div class="grid grid-cols-1 gap-4 md:gap-4 md:grid-cols-4">
@@ -22,7 +22,7 @@
       </section>
       <section v-else>
         <Heading displayText="Python"/>
-        Dupa debug
+        Debug text
         <div class="min-h-full flex flex-col justify-center">
           <div class="grid grid-cols-1 gap-4 md:gap-4 md:grid-cols-2">
             <Button displayText="Przeprowadź quiz od nowa"/>
