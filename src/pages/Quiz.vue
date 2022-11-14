@@ -1,7 +1,7 @@
 <script setup>
-  import ButtonAnswer from '../components/ButtonAnswer.vue';
-  import Heading from '../components/Heading.vue';
-  import data from '../assets/data.yml'
+  import ButtonAnswer from '@/components/ButtonAnswer.vue';
+  import Heading from '@/components/Heading.vue';
+  import data from '@/assets/data.yml'
 
   const props = defineProps({
     });
