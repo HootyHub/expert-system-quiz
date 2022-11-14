@@ -6,17 +6,15 @@ generic_questions:
   - question: "Czy lubisz matematykę?"
     answers:
       - value: "Tak"
-        categories:
-          - value: "machine_learning"
-            result: "positive"
-          - value: "data_science"
-            result: "positive"
+        result:
+          - positive:
+            - "machine_learning"
+            - "data_science"
       - value: "Nie"
-        categories:
-          - value: "machine_learning"
-            result: "negative"
-          - value: "data_science"
-            result: "negative"
+        result:
+          - negative:
+            - "machine_learning"
+            - "data_science"
 categories:
   - key: "machine_learning"
     questions:
@@ -44,8 +42,10 @@ categories:
 # ok - 1
 languages:
   - key: "python"
-    categories:
-      - name: "machine learning"
-        rating: "great"
-      - name: "data_science"
-        rating: "great"
+    rating:
+      - great:
+        - "machine_learning"
+        - "other_category"
+      - good:
+        - "beginner"
+      - ok:

@@ -4,6 +4,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import VueI18nPlugin from "@intlify/unplugin-vue-i18n/vite";
 import { resolve, dirname } from "node:path";
+import pluginYaml from 'vite-plugin-yaml2'
 
 export default defineConfig({
   server: {
@@ -18,6 +19,7 @@ export default defineConfig({
   },
   plugins: [
     vue(),
+    pluginYaml(),
     VueI18nPlugin({
       include: resolve(dirname(fileURLToPath(import.meta.url)), './src/locales/**'),
     })
