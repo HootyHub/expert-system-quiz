@@ -1,28 +1,51 @@
- questions:
-  - query: "Do you like making websites?"
+# result:
+# positive
+# neutral
+# negative
+generic_questions:
+  - question: "Czy lubisz matematykę?"
     answers:
-      - key: "Yes"
-        affects:
-          - category: "web"
-            weight: 1.1
-      - key: "No"
-        affects:
-          - category: "web"
-            weight: 0.5
+      - value: "Tak"
+        categories:
+          - value: "machine_learning"
+            result: "positive"
+          - value: "data_science"
+            result: "positive"
+      - value: "Nie"
+        categories:
+          - value: "machine_learning"
+            result: "negative"
+          - value: "data_science"
+            result: "negative"
+categories:
+  - key: "machine_learning"
+    questions:
+      - query: "Czy lubisz sprawiać, by komputery myślały?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy interesuje cię Deep Learning?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+          - value: "Nie wiem co to jest"
+            result: "neutral"
+  - key: "mobile"
+  - key: "web_design"
+  - key: "cloud_computing"
+
+# rating:
+# great - 3
+# good - 2
+# ok - 1
 languages:
   - key: "python"
     categories:
       - name: "machine learning"
-        weight: 10
-      - name: "web design"
-        weight: 2
-      - name: "beginner"
-        weight: 6
-  - key: "cpp"
-    categories:
-      - name: "performance"
-        weight: 9
-      - name: "advanced"
-        weight: 7
-      
-
+        rating: "great"
+      - name: "data_science"
+        rating: "great"
