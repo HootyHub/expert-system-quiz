@@ -9,9 +9,9 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 
 const loading = ref(true);
-const genericQuestions = data.generic_questions;
 const currentQuestion = ref(null);
 const categories = ref(null);
+const loadedData = ref(null);
 
 function showResults(){
   var ratings = {great: 3, good: 2, ok: 1};
@@ -34,9 +34,9 @@ function showResults(){
 };
 
 function getGenericQuestion() {
-  var index = Math.floor(Math.random() * genericQuestions.length);
-  currentQuestion.value = genericQuestions[index];
-  genericQuestions.splice(index, 1);
+  var index = Math.floor(Math.random() * loadedData.value.generic_questions.length);
+  currentQuestion.value = loadedData.value.generic_questions[index];
+  loadedData.value.generic_questions.splice(index, 1);
 }
 
 function getQuestionFromBestCategory() {
@@ -65,7 +65,7 @@ function getQuestionFromBestCategory() {
 
 function getQuestion() {
   loading.value = true;
-  if (genericQuestions.length > 0) {
+  if (loadedData.value.generic_questions.length > 0) {
     getGenericQuestion();
   } else {
     getQuestionFromBestCategory();
@@ -75,15 +75,12 @@ function getQuestion() {
   }, 500);
 }
 
-function loadCategories() {
-  categories.value = data.categories;
+function beginQuiz() {
+  loadedData.value = JSON.parse(JSON.stringify(data));
+  categories.value = loadedData.value.categories;
   for (var key in categories.value) {
     categories.value[key].score = 0;
   }
-}
-
-function beginQuiz() {
-  loadCategories();
   getQuestion();
 }
 
