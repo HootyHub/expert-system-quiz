@@ -16,10 +16,38 @@
   function getQuestion(){
     loading.value = true;
     setTimeout(function() {
+      if(genericQuestions.length > 0 ){
         var index = Math.floor(Math.random() * genericQuestions.length);
         currentQuestion.value = genericQuestions[index];
         genericQuestions.splice(index, 1); 
         loading.value = false;
+      }
+      else{
+        var bestCategory = Object.keys(categories.value).reduce(function(a, b){ return categories.value[a].score > categories.value[b].score ? a : b });
+        if(categories.value[bestCategory].questions.length <= 0){
+          alert("Best: " + bestCategory);
+          return;
+        }
+        var index = Math.floor(Math.random() * categories.value[bestCategory].questions.length);
+        currentQuestion.value = categories.value[bestCategory].questions[index];
+        for (var key in currentQuestion.value.answers) {
+          // Simplify me :(
+          if(currentQuestion.value.answers[key].result === "positive"){
+            currentQuestion.value.answers[key].result = {};
+            currentQuestion.value.answers[key].result.positive = [bestCategory];
+          }
+          if(currentQuestion.value.answers[key].result === "negative"){
+            currentQuestion.value.answers[key].result = {};
+            currentQuestion.value.answers[key].result.negative = [bestCategory];
+          }
+          if(currentQuestion.value.answers[key].result === "neutral"){
+            currentQuestion.value.answers[key].result = {};
+            currentQuestion.value.answers[key].result.neutral = [bestCategory];
+          }
+        }
+        categories.value[bestCategory].questions.splice(index, 1); 
+        loading.value = false;
+      }
     }, 500);
   }
 
@@ -64,7 +92,7 @@
 </script>
 <template>
     <template v-if="!loading && currentQuestion">
-        <Heading :displayText="currentQuestion.question"/>
+        <Heading :displayText="currentQuestion.query"/>
           <div class="min-h-full flex flex-col justify-center">
             <div class="grid grid-cols-1 gap-4 md:gap-4 md:grid-cols-4">
               <template v-for="answer in currentQuestion.answers">
