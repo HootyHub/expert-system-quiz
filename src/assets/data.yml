@@ -127,25 +127,302 @@ categories:
             result: "positive"
           - value: "Twórca"
             result: "negative"
-      - query: "Czy przykładasz uwagę do małych szczegółów?"
+      - query: "Czy przykładasz uwagę do małych szczegółów, np. błędów w liczbach?"
         answers:
           - value: "Tak"
             result: "positive"
           - value: "Nie"
             result: "negative"
-      - query: "Czy jesteś osobą dobrze zorganizowaną?"
+      - query: "Czy jesteś osobą dobrze zorganizowaną, np. planujesz wcześniej swój dzień?"
         answers:
           - value: "Tak"
             result: "positive"
           - value: "Nie"
             result: "negative"
-      - query: "Czy lubisz chwalić się swoją pracą?"
+      - query: "Czy lubisz chwalić się swoimi  przed innymi?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy potrafisz odnaleźć się w dużych zbiorach danych?"
         answers:
           - value: "Tak"
             result: "positive"
           - value: "Nie"
             result: "negative"
 
+  - key: "machine_learning"
+    questions:
+      - query: "Jesteś zainteresowany algorytmami genetycznymi?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy ciekawi cię sposób generowana obrazów przez AI?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Interesuje cię rozpoznawanie ludzkiej mowy i zamiana jej na tekst?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy chciałbyś nauczyć komputer rozwiązywania problemów?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Interesuje cię rozpoznawanie obrazów i analizowanie ich?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+
+  - key: "robotics"
+    questions:
+      - query: "Czy jesteś w stanie odczytać prosty schemat elektroniczny?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy chciałbyś stworzyć coś namacalnego, np. robota?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Chciałbyś analizować dane z czujników??"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Lubisz pracować z rzeczywistymi obiektami, np. roślinami, zwierzętami?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy interesuje cię automatyzacja różnych procesów?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+
+  - key: "webdev"
+    questions:
+      - query: "Zastanawiasz się co się dzieje pod stronami internetowymi, które odwiedzasz?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Chciałbyś stworzyć swój serwis internetowy?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy interesuje cię programowanie w językach interpretowanych?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+          - value: "Nie wiem"
+            result: "neutral"
+      - query: "Czy interesujesz się designem?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy chciałbyś, żeby twoje aplikacje działały na każdym urządzeniu?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+
+  - key: "desktop"
+    questions:
+      - query: "Czy chciałbyś tworzyć aplikacje na komputer?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy chciałbyś, żeby twój kod był mniej uniwersalny, ale bardziej optymalny?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+          - value: "Nie potrafię stwierdzić"
+            result: "neutral"
+      - query: "Czy chciałbyś stworzyć program typu Photoshop?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy uważasz, że konieczność instalowania aplikacji nie jest wadą?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy spędzasz więcej czasu przed komputerem niż telefonem komórkowym?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+
+  - key: "mobile"
+    questions:
+      - query: "Czy chciałbyś tworzyć aplikacje na telefon komórkowy?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy znasz się dobrze na telefonach komórkowych?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy spędzasz więcej czasu przed komórką niż komputerem?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy korzystałeś kiedyś z trybu deweloperskiego w swoim telefonie?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy uważasz, że smartfony całkowicie wyprą komputery stacjonarne?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+          - value: "Nie mam zdania"
+            result: "neutral"
+
+  - key: "firmware"
+    questions:
+      - query: "Czy chciałbyś stworzyć sterownik dla mikrofalówki?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy chciałbyś wchodzić głęboko w funkcjonowanie sprzętu?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy interesuje cię pisanie kodu pod jeden konkretny sprzęt, np. TV?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy interesuje cię programowanie w językach niskiego poziomu?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy interesuje cię pisanie kodu niewidocznego dla użytkownika?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+
+  - key: "backend"
+    questions:
+      - query: "Chciałbyś napisać własny system komputerowy?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Chciałeś kiedyś stworzyć własny serwer, np. do gry?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy interesuje cię tworzenie systemów bazodanowych?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy chciałbyś stworzyć własny język programowania?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy jest dla ciebie ciekawe tworzenie aplikacji wbudowanych?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+
+  - key: "gamedev"
+    questions:
+      - query: "Myślałeś nad tworzeniem własnych gier?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy jesteś w stanie rozwiązywać problemy geometryczne?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Interesują cię technologie jak Unity lub Unreal Engine?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+          - value: "Nie wiem"
+            result: "neutral"
+      - query: "Czy lubisz wymyślać własne historie?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy posiadasz wyobraźnię przestrzenną?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
 # rating:
 # great - 3
 # good - 2
