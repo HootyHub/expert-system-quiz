@@ -6,29 +6,29 @@ import NotFound from '@/pages/NotFound.vue'
 
 const routes = [
     {
-        path: import.meta.env.VITE_BASE_URL,
+        path: import.meta.env.BASE_URL,
         name: 'Start',
         component: Start,
     },
     {
-        path: import.meta.env.VITE_BASE_URL + 'quiz',
+        path: import.meta.env.BASE_URL + 'quiz',
         name: 'Quiz',
         component: Quiz,
     },
     {
-        path: import.meta.env.VITE_BASE_URL + 'result/:key',
+        path: import.meta.env.BASE_URL + 'result/:key',
         name: 'Result',
         component: Result,
         props: true
     },
     {
-        path: import.meta.env.VITE_BASE_URL + ':pathMatch(.*)*',
+        path: import.meta.env.BASE_URL + ':pathMatch(.*)*',
         name: 'NotFound',
         component: NotFound,
     },
 ]
 const router = createRouter({
-    history: createWebHistory(import.meta.env.VITE_BASE_URL),
+    history: createWebHistory(import.meta.env.BASE_URL),
     routes,
 })
 export default router
