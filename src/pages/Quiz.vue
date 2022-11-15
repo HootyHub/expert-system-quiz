@@ -48,7 +48,7 @@
   function loadCategories(){
     categories.value = data.categories;
     for (var key in categories.value) {
-        categories.value[key].score = 100;
+        categories.value[key].score = 0;
     }
   }
 
