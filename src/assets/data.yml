@@ -119,7 +119,7 @@ generic_questions:
             - "firmware"
 
 categories:
-  - data_analytics:
+  data_analytics:
     questions:
       - query: "Jaki typ osobowości lepiej cię opisuje?"
         answers:
@@ -152,7 +152,7 @@ categories:
           - value: "Nie"
             result: "negative"
 
-  - machine_learning:
+  machine_learning:
     questions:
       - query: "Jesteś zainteresowany algorytmami genetycznymi?"
         answers:
@@ -185,7 +185,7 @@ categories:
           - value: "Nie"
             result: "negative"
 
-  - robotics:
+  robotics:
     questions:
       - query: "Czy jesteś w stanie odczytać prosty schemat elektroniczny?"
         answers:
@@ -218,7 +218,7 @@ categories:
           - value: "Nie"
             result: "negative"
 
-  - webdev:
+  webdev:
     questions:
       - query: "Zastanawiasz się co się dzieje pod stronami internetowymi, które odwiedzasz?"
         answers:
@@ -253,7 +253,7 @@ categories:
           - value: "Nie"
             result: "negative"
 
-  - desktop:
+  desktop:
     questions:
       - query: "Czy chciałbyś tworzyć aplikacje na komputer?"
         answers:
@@ -288,7 +288,7 @@ categories:
           - value: "Nie"
             result: "negative"
 
-  - mobile:
+  mobile:
     questions:
       - query: "Czy chciałbyś tworzyć aplikacje na telefon komórkowy?"
         answers:
@@ -323,7 +323,7 @@ categories:
           - value: "Nie mam zdania"
             result: "neutral"
 
-  - firmware:
+  firmware:
     questions:
       - query: "Czy chciałbyś stworzyć sterownik dla mikrofalówki?"
         answers:
@@ -356,7 +356,7 @@ categories:
           - value: "Nie"
             result: "negative"
 
-  - backend:
+  backend:
     questions:
       - query: "Chciałbyś napisać własny system komputerowy?"
         answers:
@@ -389,7 +389,7 @@ categories:
           - value: "Nie"
             result: "negative"
 
-  - gamedev:
+  gamedev:
     questions:
       - query: "Myślałeś nad tworzeniem własnych gier?"
         answers:

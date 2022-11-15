@@ -24,12 +24,10 @@
   }
 
   function loadCategories(){
-    categories.value = data.categories.map(item => {
-        for (var key in item) {
-            item[key].score = 100;
-        }
-        return item;
-    });
+    categories.value = data.categories;
+    for (var key in categories.value) {
+        categories.value[key].score = 100;
+    }
   }
 
   function beginQuiz(){
@@ -38,17 +36,20 @@
   }
 
   function score(answer){
-    if(answer.result){
-        alert("dupa");
-        answer.result.positive.array.forEach(element => {
-            alert(element);
-        });
+    if(answer.result.positive){
+        for (var key in answer.result.positive) {
+            categories.value[answer.result.positive[key]].score += 1;
+        }
     }
     if(answer.result.negative){
-
+        for (var key in answer.result.negative) {
+            categories.value[answer.result.negative[key]].score -= 2;
+        }
     }
     if(answer.result.neutral){
-
+        for (var key in answer.result.neutral) {
+            categories.value[answer.result.neutral[key]].score += 0;
+        }
     }
   }
 
