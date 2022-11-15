@@ -3,11 +3,18 @@ import { onMounted, ref } from "vue";
 import ButtonAnswer from "@/components/ButtonAnswer.vue";
 import Heading from "@/components/Heading.vue";
 import data from "@/assets/data.yml";
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 const loading = ref(true);
 const genericQuestions = data.generic_questions;
 const currentQuestion = ref(null);
 const categories = ref(null);
+
+function showResults(){
+  router.push({ path: '/result/' + "python"});
+};
 
 function getGenericQuestion() {
   var index = Math.floor(Math.random() * genericQuestions.length);
@@ -20,7 +27,7 @@ function getQuestionFromBestCategory() {
     return categories.value[a].score > categories.value[b].score ? a : b;
   });
   if (categories.value[bestCategory].questions.length <= 0) {
-    alert("Best: " + bestCategory);
+    showResults();
     return;
   }
   var index = Math.floor(
