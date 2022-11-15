@@ -3,6 +3,7 @@ import { onMounted, ref } from "vue";
 import ButtonAnswer from "@/components/ButtonAnswer.vue";
 import Heading from "@/components/Heading.vue";
 import data from "@/assets/data.yml";
+import config from "@/config.yml";
 
 const loading = ref(true);
 const genericQuestions = data.generic_questions;
@@ -64,7 +65,7 @@ function beginQuiz() {
 }
 
 function score(answer) {
-  const results = { positive: 1, negative: -2, neutral: 0 };
+  const results = config.results;
 
   for (var key in answer.result) {
     for (var i in answer.result[key]) {
