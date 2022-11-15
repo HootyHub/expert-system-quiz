@@ -31,18 +31,12 @@
         var index = Math.floor(Math.random() * categories.value[bestCategory].questions.length);
         currentQuestion.value = categories.value[bestCategory].questions[index];
         for (var key in currentQuestion.value.answers) {
-          // Simplify me :(
-          if(currentQuestion.value.answers[key].result === "positive"){
-            currentQuestion.value.answers[key].result = {};
-            currentQuestion.value.answers[key].result.positive = [bestCategory];
-          }
-          if(currentQuestion.value.answers[key].result === "negative"){
-            currentQuestion.value.answers[key].result = {};
-            currentQuestion.value.answers[key].result.negative = [bestCategory];
-          }
-          if(currentQuestion.value.answers[key].result === "neutral"){
-            currentQuestion.value.answers[key].result = {};
-            currentQuestion.value.answers[key].result.neutral = [bestCategory];
+          var tiers = ["positive", "negative", "neutral"];
+          for(var i in tiers){
+            if(currentQuestion.value.answers[key].result === tiers[i]){
+              currentQuestion.value.answers[key].result = {};
+              currentQuestion.value.answers[key].result[tiers[i]] = [bestCategory];
+            }
           }
         }
         categories.value[bestCategory].questions.splice(index, 1); 
