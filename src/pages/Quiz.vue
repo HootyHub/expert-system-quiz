@@ -1,4 +1,5 @@
 <script setup>
+  import { onMounted, ref } from "vue";
   import ButtonAnswer from '@/components/ButtonAnswer.vue';
   import Heading from '@/components/Heading.vue';
   import data from '@/assets/data.yml'
@@ -6,15 +7,62 @@
   const props = defineProps({
     });
 
-  const result = "";
-  const currentQuestion = data.generic_questions[0];
+  const loading = ref(true);
+  const currentQuestion = ref(null);
+
+  const genericQuestions = data.generic_questions;
+  const categories = ref(null);
+
+  function getQuestion(){
+    loading.value = true;
+    setTimeout(function() {
+        var index = Math.floor(Math.random() * genericQuestions.length);
+        currentQuestion.value = genericQuestions[index];
+        genericQuestions.splice(index, 1); 
+        loading.value = false;
+    }, 500);
+  }
+
+  function loadCategories(){
+    categories.value = data.categories.map(item => {
+        for (var key in item) {
+            item[key].score = 100;
+        }
+        return item;
+    });
+  }
+
+  function beginQuiz(){
+    loadCategories();
+    getQuestion();
+  }
+
+  function score(answer){
+    if(answer.result){
+        alert("dupa");
+        answer.result.positive.array.forEach(element => {
+            alert(element);
+        });
+    }
+    if(answer.result.negative){
+
+    }
+    if(answer.result.neutral){
+
+    }
+  }
 
   function handleAnswer(answer){
-    alert(answer.value);
+    getQuestion();
+    score(answer);
   }
+
+  onMounted(() => {
+    beginQuiz();
+});
 </script>
 <template>
-    <template v-if="currentQuestion">
+    <template v-if="!loading && currentQuestion">
         <Heading :displayText="currentQuestion.question"/>
           <div class="min-h-full flex flex-col justify-center">
             <div class="grid grid-cols-1 gap-4 md:gap-4 md:grid-cols-4">
