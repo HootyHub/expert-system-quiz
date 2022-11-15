@@ -4,44 +4,47 @@
   import Heading from '@/components/Heading.vue';
   import data from '@/assets/data.yml'
 
-  const props = defineProps({
-    });
-
   const loading = ref(true);
-  const currentQuestion = ref(null);
-
   const genericQuestions = data.generic_questions;
+  const currentQuestion = ref(null);
   const categories = ref(null);
+
+  function getGenericQuestion(){
+    var index = Math.floor(Math.random() * genericQuestions.length);
+    currentQuestion.value = genericQuestions[index];
+    genericQuestions.splice(index, 1);
+  }
+
+  function getQuestionFromBestCategory(){
+    var bestCategory = Object.keys(categories.value).reduce(function(a, b){ return categories.value[a].score > categories.value[b].score ? a : b });
+    if(categories.value[bestCategory].questions.length <= 0){
+      alert("Best: " + bestCategory);
+      return;
+    }
+    var index = Math.floor(Math.random() * categories.value[bestCategory].questions.length);
+    currentQuestion.value = categories.value[bestCategory].questions[index];
+    for (var key in currentQuestion.value.answers) {
+      var tiers = ["positive", "negative", "neutral"];
+        for(var i in tiers){
+          if(currentQuestion.value.answers[key].result === tiers[i]){
+            currentQuestion.value.answers[key].result = {};
+            currentQuestion.value.answers[key].result[tiers[i]] = [bestCategory];
+          }
+        }
+      }
+    categories.value[bestCategory].questions.splice(index, 1);
+  }
 
   function getQuestion(){
     loading.value = true;
-    setTimeout(function() {
-      if(genericQuestions.length > 0 ){
-        var index = Math.floor(Math.random() * genericQuestions.length);
-        currentQuestion.value = genericQuestions[index];
-        genericQuestions.splice(index, 1); 
-        loading.value = false;
+    if(genericQuestions.length > 0 ){
+        getGenericQuestion();
       }
       else{
-        var bestCategory = Object.keys(categories.value).reduce(function(a, b){ return categories.value[a].score > categories.value[b].score ? a : b });
-        if(categories.value[bestCategory].questions.length <= 0){
-          alert("Best: " + bestCategory);
-          return;
-        }
-        var index = Math.floor(Math.random() * categories.value[bestCategory].questions.length);
-        currentQuestion.value = categories.value[bestCategory].questions[index];
-        for (var key in currentQuestion.value.answers) {
-          var tiers = ["positive", "negative", "neutral"];
-          for(var i in tiers){
-            if(currentQuestion.value.answers[key].result === tiers[i]){
-              currentQuestion.value.answers[key].result = {};
-              currentQuestion.value.answers[key].result[tiers[i]] = [bestCategory];
-            }
-          }
-        }
-        categories.value[bestCategory].questions.splice(index, 1); 
-        loading.value = false;
-      }
+        getQuestionFromBestCategory();
+    }
+    setTimeout(function() {
+      loading.value = false;
     }, 500);
   }
 
