@@ -14,7 +14,23 @@ const currentQuestion = ref(null);
 const categories = ref(null);
 
 function showResults(){
-  router.push({ path: '/result/' + "python"});
+  var ratings = {great: 3, good: 2, ok: 1};
+  var languageLeaderboard = [];
+  for (var language in data.languages){
+    var languageScoring = {}
+    languageScoring.key = data.languages[language].key;
+    languageScoring.score = 0;
+    for (var key in ratings){
+      for (var category in data.languages[language].rating[key]){
+        languageScoring.score += categories.value[data.languages[language].rating[key][category]].score * ratings[key]
+      }
+    }
+    languageLeaderboard.push(languageScoring);
+  }
+  var bestLanguage = languageLeaderboard.reduce(function(prev, current) {
+    return (prev.score > current.score) ? prev : current
+  })
+  router.push({ path: '/result/' + bestLanguage.key});
 };
 
 function getGenericQuestion() {
