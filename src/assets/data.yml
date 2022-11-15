@@ -7,116 +7,116 @@ generic_questions:
     answers:
       - value: "Tak"
         result:
-          - positive:
-              - "data_analytics"
-              - "machine_learning"
-              - "robotics"
+          positive:
+            - "data_analytics"
+            - "machine_learning"
+            - "robotics"
       - value: "Nie"
         result:
-          - negative:
-              - "data_analytics"
-              - "machine_learning"
-              - "robotics"
+          negative:
+            - "data_analytics"
+            - "machine_learning"
+            - "robotics"
 
   - question: "Która rzecz z wymienionych sprawia ci największą przyjemność?"
     answers:
       - value: "Majsterkowanie"
         result:
-          - positive:
-              - "robotics"
+          positive:
+            - "robotics"
       - value: "Rysowanie"
         result:
-          - positive:
-              - "webdev"
+          positive:
+            - "webdev"
       - value: "Rozwiązywanie zagadek"
         result:
-          - positive:
-              - "data_analytics"
+          positive:
+            - "data_analytics"
       - value: "Granie w gry"
         result:
-          - positive:
-              - "gamedev"
+          positive:
+            - "gamedev"
 
   - question: "Co z wymienionych najmniej cię interesuje?"
     answers:
       - value: "Strony internetowe"
         result:
-          - negative:
-              - "webdev"
+          negative:
+            - "webdev"
       - value: "Aplikacje mobilne"
         result:
-          - negative:
-              - "mobile"
+          negative:
+            - "mobile"
       - value: "Matematyka"
         result:
-          - negative:
-              - "machine_learning"
-              - "data_analytics"
-              - "robotics"
+          negative:
+            - "machine_learning"
+            - "data_analytics"
+            - "robotics"
 
   - question: "Którą z wymienionych rzeczy najbardziej chciałbyś oprogramować?"
     answers:
       - value: "Grę na komórkę"
         result:
-          - positive:
-              - "gamedev"
-              - "mobile"
+          positive:
+            - "gamedev"
+            - "mobile"
       - value: "Grę na PC"
         result:
-          - positive:
-              - "gamedev"
-              - "desktop"
+          positive:
+            - "gamedev"
+            - "desktop"
       - value: "Stronę internetową"
         result:
-          - positive:
-              - "webdev"
+          positive:
+            - "webdev"
       - value: "Sterownik do czajnika"
         result:
-          - positive:
-              - "firmware"
+          positive:
+            - "firmware"
       - value: "Kociego robota"
         result:
-          - positive:
-              - "robotics"
+          positive:
+            - "robotics"
 
   - question: "Jeśli miałbyś stworzyć grę wideo, czym byś się zajął?"
     answers:
       - value: "AI przeciwników"
         result:
-          - positive:
-              - "machine_learning"
+          positive:
+            - "machine_learning"
       - value: "Serwerem do gry"
         result:
-          - positive:
-              - "backend"
+          positive:
+            - "backend"
       - value: "Wersją mobilną gry"
         result:
-          - positive:
-              - "mobile"
+          positive:
+            - "mobile"
       - value: "Wersją komputerową gry"
         result:
-          - positive:
-              - "desktop"
+          positive:
+            - "desktop"
       - value: "Żadnym z wymienionych"
         result:
-          - negative:
-              - "machine_learning"
-              - "backend"
-              - "mobile"
-              - "desktop"
+          negative:
+            - "machine_learning"
+            - "backend"
+            - "mobile"
+            - "desktop"
 
   - question: "Czy lubisz zajmować się sprzętem?"
     answers:
       - value: "Tak"
         result:
-          - positive:
-              - "robotics"
-              - "firmware"
+          positive:
+            - "robotics"
+            - "firmware"
       - value: "Nie"
         result:
-          - negative:
-              - "robotics"
-              - "firmware"
+          negative:
+            - "robotics"
+            - "firmware"
 
 categories:
   - data_analytics:
@@ -430,63 +430,63 @@ categories:
 languages:
   - key: "python"
     rating:
-      - great:
-          - "data_analytics"
-          - "machine_learning"
-          - "robotics"
-      - ok:
-          - "webdev"
+      great:
+        - "data_analytics"
+        - "machine_learning"
+        - "robotics"
+      ok:
+        - "webdev"
 
   - key: "javascript"
     rating:
-      - great:
-          - "webdev"
-      - ok:
-          - "desktop"
+      great:
+        - "webdev"
+      ok:
+        - "desktop"
 
   - key: "java"
     rating:
-      - great:
-          - "mobile"
-          - "desktop"
+      great:
+        - "mobile"
+        - "desktop"
 
   - key: "c"
     rating:
-      - great:
-          - "firmware"
-          - "backend"
+      great:
+        - "firmware"
+        - "backend"
 
   - key: "cpp"
     rating:
-      - great:
-          - "gamedev"
-          - "desktop"
-          - "robotics"
-      - good:
-          - "firmware"
-          - "backend"
+      great:
+        - "gamedev"
+        - "desktop"
+        - "robotics"
+      good:
+        - "firmware"
+        - "backend"
 
   - key: "csharp"
     rating:
-      - great:
-          - "desktop"
-          - "gamedev"
-      - good:
-          - "webdev"
+      great:
+        - "desktop"
+        - "gamedev"
+      good:
+        - "webdev"
 
   - key: "r"
     rating:
-      - great:
-          - "data_analytics"
-      - good:
-          - "machine_learning"
+      great:
+        - "data_analytics"
+      good:
+        - "machine_learning"
 
   - key: "kotlin_and_swift"
     rating:
-      - great:
-          - "mobile"
+      great:
+        - "mobile"
 
   - key: "php"
     rating:
-      - great:
-          - "webdev"
+      great:
+        - "webdev"
