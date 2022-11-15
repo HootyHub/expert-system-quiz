@@ -7,119 +7,119 @@ generic_questions:
     answers:
       - value: "Tak"
         result:
-          - positive:
-              - "data_analytics"
-              - "machine_learning"
-              - "robotics"
+          positive:
+            - "data_analytics"
+            - "machine_learning"
+            - "robotics"
       - value: "Nie"
         result:
-          - negative:
-              - "data_analytics"
-              - "machine_learning"
-              - "robotics"
+          negative:
+            - "data_analytics"
+            - "machine_learning"
+            - "robotics"
 
   - question: "Która rzecz z wymienionych sprawia ci największą przyjemność?"
     answers:
       - value: "Majsterkowanie"
         result:
-          - positive:
-              - "robotics"
+          positive:
+            - "robotics"
       - value: "Rysowanie"
         result:
-          - positive:
-              - "webdev"
+          positive:
+            - "webdev"
       - value: "Rozwiązywanie zagadek"
         result:
-          - positive:
-              - "data_analytics"
+          positive:
+            - "data_analytics"
       - value: "Granie w gry"
         result:
-          - positive:
-              - "gamedev"
+          positive:
+            - "gamedev"
 
   - question: "Co z wymienionych najmniej cię interesuje?"
     answers:
       - value: "Strony internetowe"
         result:
-          - negative:
-              - "webdev"
+          negative:
+            - "webdev"
       - value: "Aplikacje mobilne"
         result:
-          - negative:
-              - "mobile"
+          negative:
+            - "mobile"
       - value: "Matematyka"
         result:
-          - negative:
-              - "machine_learning"
-              - "data_analytics"
-              - "robotics"
+          negative:
+            - "machine_learning"
+            - "data_analytics"
+            - "robotics"
 
   - question: "Którą z wymienionych rzeczy najbardziej chciałbyś oprogramować?"
     answers:
       - value: "Grę na komórkę"
         result:
-          - positive:
-              - "gamedev"
-              - "mobile"
+          positive:
+            - "gamedev"
+            - "mobile"
       - value: "Grę na PC"
         result:
-          - positive:
-              - "gamedev"
-              - "desktop"
+          positive:
+            - "gamedev"
+            - "desktop"
       - value: "Stronę internetową"
         result:
-          - positive:
-              - "webdev"
+          positive:
+            - "webdev"
       - value: "Sterownik do czajnika"
         result:
-          - positive:
-              - "firmware"
+          positive:
+            - "firmware"
       - value: "Kociego robota"
         result:
-          - positive:
-              - "robotics"
+          positive:
+            - "robotics"
 
   - question: "Jeśli miałbyś stworzyć grę wideo, czym byś się zajął?"
     answers:
       - value: "AI przeciwników"
         result:
-          - positive:
-              - "machine_learning"
+          positive:
+            - "machine_learning"
       - value: "Serwerem do gry"
         result:
-          - positive:
-              - "backend"
+          positive:
+            - "backend"
       - value: "Wersją mobilną gry"
         result:
-          - positive:
-              - "mobile"
+          positive:
+            - "mobile"
       - value: "Wersją komputerową gry"
         result:
-          - positive:
-              - "desktop"
+          positive:
+            - "desktop"
       - value: "Żadnym z wymienionych"
         result:
-          - negative:
-              - "machine_learning"
-              - "backend"
-              - "mobile"
-              - "desktop"
+          negative:
+            - "machine_learning"
+            - "backend"
+            - "mobile"
+            - "desktop"
 
   - question: "Czy lubisz zajmować się sprzętem?"
     answers:
       - value: "Tak"
         result:
-          - positive:
-              - "robotics"
-              - "firmware"
+          positive:
+            - "robotics"
+            - "firmware"
       - value: "Nie"
         result:
-          - negative:
-              - "robotics"
-              - "firmware"
+          negative:
+            - "robotics"
+            - "firmware"
 
 categories:
-  - key: "data_analytics"
+  - data_analytics:
     questions:
       - query: "Jaki typ osobowości lepiej cię opisuje?"
         answers:
@@ -127,25 +127,302 @@ categories:
             result: "positive"
           - value: "Twórca"
             result: "negative"
-      - query: "Czy przykładasz uwagę do małych szczegółów?"
+      - query: "Czy przykładasz uwagę do małych szczegółów, np. błędów w liczbach?"
         answers:
           - value: "Tak"
             result: "positive"
           - value: "Nie"
             result: "negative"
-      - query: "Czy jesteś osobą dobrze zorganizowaną?"
+      - query: "Czy jesteś osobą dobrze zorganizowaną, np. planujesz wcześniej swój dzień?"
         answers:
           - value: "Tak"
             result: "positive"
           - value: "Nie"
             result: "negative"
-      - query: "Czy lubisz chwalić się swoją pracą?"
+      - query: "Czy lubisz chwalić się swoimi  przed innymi?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy potrafisz odnaleźć się w dużych zbiorach danych?"
         answers:
           - value: "Tak"
             result: "positive"
           - value: "Nie"
             result: "negative"
 
+  - machine_learning:
+    questions:
+      - query: "Jesteś zainteresowany algorytmami genetycznymi?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy ciekawi cię sposób generowana obrazów przez AI?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Interesuje cię rozpoznawanie ludzkiej mowy i zamiana jej na tekst?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy chciałbyś nauczyć komputer rozwiązywania problemów?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Interesuje cię rozpoznawanie obrazów i analizowanie ich?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+
+  - robotics:
+    questions:
+      - query: "Czy jesteś w stanie odczytać prosty schemat elektroniczny?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy chciałbyś stworzyć coś namacalnego, np. robota?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Chciałbyś analizować dane z czujników??"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Lubisz pracować z rzeczywistymi obiektami, np. roślinami, zwierzętami?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy interesuje cię automatyzacja różnych procesów?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+
+  - webdev:
+    questions:
+      - query: "Zastanawiasz się co się dzieje pod stronami internetowymi, które odwiedzasz?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Chciałbyś stworzyć swój serwis internetowy?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy interesuje cię programowanie w językach interpretowanych?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+          - value: "Nie wiem"
+            result: "neutral"
+      - query: "Czy interesujesz się designem?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy chciałbyś, żeby twoje aplikacje działały na każdym urządzeniu?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+
+  - desktop:
+    questions:
+      - query: "Czy chciałbyś tworzyć aplikacje na komputer?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy chciałbyś, żeby twój kod był mniej uniwersalny, ale bardziej optymalny?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+          - value: "Nie potrafię stwierdzić"
+            result: "neutral"
+      - query: "Czy chciałbyś stworzyć program typu Photoshop?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy uważasz, że konieczność instalowania aplikacji nie jest wadą?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy spędzasz więcej czasu przed komputerem niż telefonem komórkowym?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+
+  - mobile:
+    questions:
+      - query: "Czy chciałbyś tworzyć aplikacje na telefon komórkowy?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy znasz się dobrze na telefonach komórkowych?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy spędzasz więcej czasu przed komórką niż komputerem?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy korzystałeś kiedyś z trybu deweloperskiego w swoim telefonie?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy uważasz, że smartfony całkowicie wyprą komputery stacjonarne?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+          - value: "Nie mam zdania"
+            result: "neutral"
+
+  - firmware:
+    questions:
+      - query: "Czy chciałbyś stworzyć sterownik dla mikrofalówki?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy chciałbyś wchodzić głęboko w funkcjonowanie sprzętu?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy interesuje cię pisanie kodu pod jeden konkretny sprzęt, np. TV?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy interesuje cię programowanie w językach niskiego poziomu?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy interesuje cię pisanie kodu niewidocznego dla użytkownika?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+
+  - backend:
+    questions:
+      - query: "Chciałbyś napisać własny system komputerowy?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Chciałeś kiedyś stworzyć własny serwer, np. do gry?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy interesuje cię tworzenie systemów bazodanowych?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy chciałbyś stworzyć własny język programowania?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy jest dla ciebie ciekawe tworzenie aplikacji wbudowanych?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+
+  - gamedev:
+    questions:
+      - query: "Myślałeś nad tworzeniem własnych gier?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy jesteś w stanie rozwiązywać problemy geometryczne?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Interesują cię technologie jak Unity lub Unreal Engine?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+          - value: "Nie wiem"
+            result: "neutral"
+      - query: "Czy lubisz wymyślać własne historie?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
+      - query: "Czy posiadasz wyobraźnię przestrzenną?"
+        answers:
+          - value: "Tak"
+            result: "positive"
+          - value: "Nie"
+            result: "negative"
 # rating:
 # great - 3
 # good - 2
@@ -153,63 +430,63 @@ categories:
 languages:
   - key: "python"
     rating:
-      - great:
-          - "data_analytics"
-          - "machine_learning"
-          - "robotics"
-      - ok:
-          - "webdev"
+      great:
+        - "data_analytics"
+        - "machine_learning"
+        - "robotics"
+      ok:
+        - "webdev"
 
   - key: "javascript"
     rating:
-      - great:
-          - "webdev"
-      - ok:
-          - "desktop"
+      great:
+        - "webdev"
+      ok:
+        - "desktop"
 
   - key: "java"
     rating:
-      - great:
-          - "mobile"
-          - "desktop"
+      great:
+        - "mobile"
+        - "desktop"
 
   - key: "c"
     rating:
-      - great:
-          - "firmware"
-          - "backend"
+      great:
+        - "firmware"
+        - "backend"
 
   - key: "cpp"
     rating:
-      - great:
-          - "gamedev"
-          - "desktop"
-          - "robotics"
-      - good:
-          - "firmware"
-          - "backend"
+      great:
+        - "gamedev"
+        - "desktop"
+        - "robotics"
+      good:
+        - "firmware"
+        - "backend"
 
   - key: "csharp"
     rating:
-      - great:
-          - "desktop"
-          - "gamedev"
-      - good:
-          - "webdev"
+      great:
+        - "desktop"
+        - "gamedev"
+      good:
+        - "webdev"
 
   - key: "r"
     rating:
-      - great:
-          - "data_analytics"
-      - good:
-          - "machine_learning"
+      great:
+        - "data_analytics"
+      good:
+        - "machine_learning"
 
   - key: "kotlin_and_swift"
     rating:
-      - great:
-          - "mobile"
+      great:
+        - "mobile"
 
   - key: "php"
     rating:
-      - great:
-          - "webdev"
+      great:
+        - "webdev"
