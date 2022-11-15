@@ -10,8 +10,11 @@
   },
   "dependencies": {
     "@intlify/unplugin-vue-i18n": "^0.7.1",
+    "tw-elements": "^1.0.0-alpha12",
+    "vite-plugin-yaml2": "^1.0.0",
     "vue": "^3.2.37",
-    "vue-i18n": "^9.2.2"
+    "vue-i18n": "^9.2.2",
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.1.0",
