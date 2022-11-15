@@ -6,23 +6,23 @@ import NotFound from '@/pages/NotFound.vue'
 
 const routes = [
     {
-        path: '/',
+        path: import.meta.env.VITE_BASE_URL,
         name: 'Start',
         component: Start,
     },
     {
-        path: '/quiz',
+        path: import.meta.env.VITE_BASE_URL + 'quiz',
         name: 'Quiz',
         component: Quiz,
     },
     {
-        path: '/result/:key',
+        path: import.meta.env.VITE_BASE_URL + 'result/:key',
         name: 'Result',
         component: Result,
         props: true
     },
     {
-        path: '/:pathMatch(.*)*',
+        path: import.meta.env.VITE_BASE_URL + ':pathMatch(.*)*',
         name: 'NotFound',
         component: NotFound,
     },

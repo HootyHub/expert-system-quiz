@@ -3,7 +3,7 @@
 # neutral
 # negative
 generic_questions:
-  - question: "Czy lubisz matematykę?"
+  - query: "Czy lubisz matematykę?"
     answers:
       - value: "Tak"
         result:
@@ -18,7 +18,7 @@ generic_questions:
             - "machine_learning"
             - "robotics"
 
-  - question: "Która rzecz z wymienionych sprawia ci największą przyjemność?"
+  - query: "Która rzecz z wymienionych sprawia ci największą przyjemność?"
     answers:
       - value: "Majsterkowanie"
         result:
@@ -37,7 +37,7 @@ generic_questions:
           positive:
             - "gamedev"
 
-  - question: "Co z wymienionych najmniej cię interesuje?"
+  - query: "Co z wymienionych najmniej cię interesuje?"
     answers:
       - value: "Strony internetowe"
         result:
@@ -54,7 +54,7 @@ generic_questions:
             - "data_analytics"
             - "robotics"
 
-  - question: "Którą z wymienionych rzeczy najbardziej chciałbyś oprogramować?"
+  - query: "Którą z wymienionych rzeczy najbardziej chciałbyś oprogramować?"
     answers:
       - value: "Grę na komórkę"
         result:
@@ -79,7 +79,7 @@ generic_questions:
           positive:
             - "robotics"
 
-  - question: "Jeśli miałbyś stworzyć grę wideo, czym byś się zajął?"
+  - query: "Jeśli miałbyś stworzyć grę wideo, czym byś się zajął?"
     answers:
       - value: "AI przeciwników"
         result:
@@ -105,7 +105,7 @@ generic_questions:
             - "mobile"
             - "desktop"
 
-  - question: "Czy lubisz zajmować się sprzętem?"
+  - query: "Czy lubisz zajmować się sprzętem?"
     answers:
       - value: "Tak"
         result:
@@ -199,7 +199,7 @@ categories:
             result: "positive"
           - value: "Nie"
             result: "negative"
-      - query: "Chciałbyś analizować dane z czujników??"
+      - query: "Chciałbyś analizować dane z czujników?"
         answers:
           - value: "Tak"
             result: "positive"
