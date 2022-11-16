@@ -429,6 +429,7 @@ categories:
 # ok - 1
 languages:
   - key: "python"
+    name: "Python"
     rating:
       great:
         - "data_analytics"
@@ -438,6 +439,7 @@ languages:
         - "webdev"
 
   - key: "javascript"
+    name: "JavaScript"
     rating:
       great:
         - "webdev"
@@ -445,18 +447,21 @@ languages:
         - "desktop"
 
   - key: "java"
+    name: "Java"
     rating:
       great:
         - "mobile"
         - "desktop"
 
   - key: "c"
+    name: "C"
     rating:
       great:
         - "firmware"
         - "backend"
 
   - key: "cpp"
+    name: "C++"
     rating:
       great:
         - "gamedev"
@@ -467,6 +472,7 @@ languages:
         - "backend"
 
   - key: "csharp"
+    name: "C#"
     rating:
       great:
         - "desktop"
@@ -475,6 +481,7 @@ languages:
         - "webdev"
 
   - key: "r"
+    name: "R"
     rating:
       great:
         - "data_analytics"
@@ -482,11 +489,13 @@ languages:
         - "machine_learning"
 
   - key: "kotlin_and_swift"
+    name: "Kotlin oraz Swift"
     rating:
       great:
         - "mobile"
 
   - key: "php"
+    name: "PHP"
     rating:
       great:
         - "webdev"
