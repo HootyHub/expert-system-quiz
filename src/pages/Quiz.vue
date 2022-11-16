@@ -14,7 +14,7 @@ const categories = ref(null);
 const loadedData = ref(null);
 
 function showResults(){
-  var ratings = {great: 3, good: 2, ok: 1};
+  var ratings = config.rating;
   var languageLeaderboard = [];
   for (var language in data.languages){
     var languageScoring = {}
@@ -52,7 +52,7 @@ function getQuestionFromBestCategory() {
   );
   currentQuestion.value = categories.value[bestCategory].questions[index];
   for (var key in currentQuestion.value.answers) {
-    var tiers = ["positive", "negative", "neutral"];
+    var tiers = Object.keys(config.results);
     for (var i in tiers) {
       if (currentQuestion.value.answers[key].result === tiers[i]) {
         currentQuestion.value.answers[key].result = {};
