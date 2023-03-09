@@ -8,7 +8,7 @@ A web-based application that uses the Vue framework. The quiz is designed to ask
 Demo: https://hootyhub.github.io/expert-system-quiz
 
 ## Expert system
-This makes it a fun and interactive way to learn about different programming languages that may be suitable for the user. The quiz 
+An expert system is a type of AI software that mimics the decision-making ability of a human expert in a specific field using a knowledge base and inference engine. This makes it a fun and interactive way to learn about different programming languages that may be suitable for the user.
 
 ### Example question
 The quiz adjusts the questions based on the user's current score to better match their interests and hobbies.
