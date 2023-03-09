@@ -36,7 +36,7 @@ jobs:
           npm install
       - name: Build dependencies
         run: |
-          npm run build -- --base=/msi-project/
+          npm run build -- --base=/expert-system-quiz/
       - uses: actions/upload-artifact@master
         with:
           name: page
